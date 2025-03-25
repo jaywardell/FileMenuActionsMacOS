@@ -48,6 +48,8 @@ public struct CloseWindowButton: View {
         
     @State private var shouldDisable: Bool = false
 
+    public init() {}
+    
     public var body: some View {
         Button("Close") {
             NotificationCenter.default.post(name: .windowShouldClose, object: nil)
@@ -68,6 +70,8 @@ public struct CloseAllWindowsButton: View {
     
     @State private var shouldDisable: Bool = false
     
+    public init() {}
+
     public var body: some View {
         Button("Close All Windows") {
             NotificationCenter.default.post(name: .allWindowsShouldClose, object: nil)
