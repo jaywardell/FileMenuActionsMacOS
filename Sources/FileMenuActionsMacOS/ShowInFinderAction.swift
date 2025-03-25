@@ -19,7 +19,7 @@ public struct ShowInFinderAction {
 }
 
 @available(macOS 14.0, *)
-extension EnvironmentValues {
+public extension EnvironmentValues {
 
     /// an instance of `ShowInFinderAction` that's been passed down the environment
     @Entry var showInFinder: ShowInFinderAction?
