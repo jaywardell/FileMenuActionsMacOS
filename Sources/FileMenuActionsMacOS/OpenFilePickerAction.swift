@@ -13,6 +13,9 @@ import SwiftUI
 @available(macOS 14.0, *)
 @MainActor
 public struct OpenFilePickerAction {
+    
+    public init() {}
+    
     @MainActor public func callAsFunction() {
         NSApplication.shared.sendAction(#selector(NSDocumentController.openDocument(_:)), to: nil, from: nil)
     }
@@ -42,7 +45,7 @@ public struct FilePickerButton: View {
     let title: String
     let systemImage: String?
     
-    init(title: String, systemImage: String? = nil) {
+    public init(title: String, systemImage: String? = nil) {
         self.title = title
         self.systemImage = systemImage
     }
